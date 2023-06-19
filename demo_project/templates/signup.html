@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Signup Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .container input[type="text"],
+    .container input[type="email"],
+    .container input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .container input[type="submit"] {
+      background-color: #4caf50;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .container input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Signup</h2>
+    <form method="POST">
+      {% csrf_token %}
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Full Name" name="fullname" required>
+      <label for="mail"><b>Email</b></label>
+      <input type="email" placeholder="Email id" name="email id" required>
+      <label for="password"><b>Password</b></label>
+      <input type="password" placeholder="Password" name="password" required>
+      <input type="submit" value="Sign Up">
+      <a class="button" href="/login">login</a>
+    </form>
+  </div>
+</body>
+</html>
