@@ -1,0 +1,59 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Document
+        </title>
+        <style>
+            table{
+                width: 100%;
+                border: 1px solid gray;
+                border-collapse: collapse;
+            }
+            th,td{
+                border: 1px solid gray;
+                padding: 5px;
+            }
+            th{
+                text-align: left;
+                background-color: black;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+         <!--{% for each in student %}
+        {{each.student_id}}
+        {{each.student_name}}
+        {{each.student_age}}
+        {{each.student_gender}}
+        {{each.student_class}}
+        <br>
+        {% endfor %}-->
+        <table>
+            <thead>
+                <tr>
+                   <!--- <th>ID</th>--->
+                    <th>student_id</th>
+                    <th>student_name</th>
+                    <th>student_age</th>
+                    <th>student_gender</th>
+                    <th>student_class</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for each in student %}
+                <tr>
+                    <td>{{each.student_id}}</td>
+                    <td>{{each.student_name}}</td>
+                    <td>{{each.student_age}}</td>
+                    <td>{{each.student_gender}}</td>
+                    <td>{{each.student_class}}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </body>
+</html>

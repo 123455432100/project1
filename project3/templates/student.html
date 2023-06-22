@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="POST">
+        {% csrf_token %} 
+        <h3>Student form</h3>
+        <label for="">student id</label>
+        <input type="number" name="studentid"><br>
+        <label for="">student name</label>
+        <input type="text" name="studentname"><br>
+        <label for="">student age</label>
+        <input type="number" name="studentage"><br>
+        <label for="">student gender</label>
+        <input type="text" name="studentgender"><br>
+        <label for="">student class</label>
+        <input type="number" name="studentclass"><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
